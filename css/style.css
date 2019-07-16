@@ -1,0 +1,149 @@
+.body {
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.navbar-brand {
+    letter-spacing: .2em;
+    font-weight: 800;
+   
+    margin-left: 12%;
+    word-spacing: 200px;
+}
+
+.navbar-nav {
+    padding-left: 15%;
+    font-size: 1.1em;
+    
+}
+
+.shopNowBtn {
+    color:black;
+    background-color:#51eaea;
+    border-color:#51eaea;
+    font-size: 1rem;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    font-weight: 500;
+   
+}
+.jumbotronHeader {
+    /*background: url("../imgs/header.jpg")*/
+    /*center center/ cover no-repeat;*/
+    
+}
+
+.jumbotron blockquote {
+    margin-top: 200px;
+    font-weight: 400;
+}
+.jumbotron h1 {
+    font-weight: 800;
+   
+}
+
+
+.footerCopyright {
+    text-align: center;
+}
+
+.mainFooter h5 {
+    padding-left: 35;
+    margin-top: 40px;
+}
+
+
+.mainFooter ul {
+    list-style: none;
+   
+}
+.mainFooter i {
+    padding-right: 5px;
+}
+
+.mainFooter p {
+    padding-left: 34;
+}
+
+
+.getInTouch {
+   padding:1em 1em 1em 1.7em;
+}
+
+.btn-outline{
+    color: white;
+    background-color: #51eaea;
+    border-color: #51eaea;
+    transition: 0.3s;
+}
+.btn-outline:hover{
+    background-color: #fff;
+    color:  #51eaea;
+}
+.officeSection{
+    background: #51eaea;
+    padding: 40px 0px 40px 0px;
+}
+
+.aboutUs  {
+    background: url("imgs/header.jpg")
+    center center/ cover no-repeat;
+    height: 100%;
+    color: #fff;
+
+}
+.aboutUs h1{
+    font-size: 70px;
+}
+
+.aboutUs p{
+    font-size: 20px;
+}
+
+.text-center {
+    margin: 20px auto;
+   
+}
+.secondContainer{
+    background: url("imgs/bg_1.jpg")  
+    center center/ cover no-repeat;  
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.secContainer{
+    padding: 5em 0;
+}
+.thirdContainer {
+    padding-bottom: 20px;
+}
+
+.fourthContainer{
+    
+    text-align: center!important;
+}
+.fourthContainer h1 {
+padding-top: 25px;
+}
+.testMon {
+        background: #51eaea;
+        padding: 35px 20px 35px 20px;
+        overflow: hidden;
+        
+}
+ 
+.subTotalH5 {
+    padding-right: 15em;
+}
+.sale {
+    padding: 5px 50px 5px 50px;
+    position: absolute;
+    background: none;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+}
