@@ -13,7 +13,7 @@
       unset($_SESSION['status']);
   }?>
 
-<form action="includes/function.php" method="POST">
+<form action="../includes/function.php" method="POST">
     <input type="hidden" name="roles_id" value='2' class="form-control" >
     <div class="form-group">
         <label> Username </label>
