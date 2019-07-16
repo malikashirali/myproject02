@@ -1,5 +1,5 @@
 <?php 
-include_once("includes/header.php");  
+include("includes/header.php");  
 include("../includes/db.php");
 ?>
 
@@ -13,6 +13,8 @@ include("../includes/db.php");
 <body class="bg-gradient-primary">
 <div class="container">
 <!-- Outer Row -->
+
+
 <div class="row justify-content-center">
 <div class="col-xl-10 col-lg-12 col-md-9">
       <div class="card o-hidden border-0 shadow-lg my-5">
@@ -34,6 +36,14 @@ include("../includes/db.php");
                   </div>
                   <input type="submit" name="loginButton" class="btn btn-primary btn-user btn-block" value="Login">
                 </form>
+                <div class="text-center pt-5">
+              <?php 
+                if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
+                  echo '<h5 class="alert alert-danger">' .$_SESSION['status'].' </h5>';
+                  unset($_SESSION['status']);
+                }
+                ?>
+                </div>
               </div>
             </div>
           </div>

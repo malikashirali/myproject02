@@ -1,5 +1,5 @@
 <?php 
-include_once('includes/header.php');
+include('includes/header.php');
 include('includes/navbar.php');
 
 if(!(isset($_SESSION['username']))) {

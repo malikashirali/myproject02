@@ -1,8 +1,7 @@
 <?php
-  error_reporting(0);
-  include("../includes/db.php");     
   include("../includes/header.php");
-?>
+  include("../includes/db.php");     
+  ?>
 <!--Header-->
   <?php 
     if(isset($_SESSION['message']) && $_SESSION['message'] !='') {

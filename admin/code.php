@@ -130,19 +130,18 @@ if (isset($_POST['ProductUpdate'])) {
 if(isset($_POST['loginButton'])){
   $username = $_POST['username'];
   $password = $_POST['password'];
-  
   $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
- 
   $res = mysqli_query($connection,$query);
   if($res){
-    while($row = mysqli_fetch_assoc($res)){
-      if($row['username'] == $username && $row['password'] == $password)
+    $row = mysqli_fetch_assoc($res);
+      if($row['username'] == $username && $row['password'] == $password){
       $_SESSION['username'] = $row['username'];
-      header('location: index.php');
-      die('Here');
-    }
-  }else{
-    header('location: login.php');
+      header('location: index.php');;
+      }
+      else{
+        $_SESSION['status'] = 'Username or Password Doesn\'t Match';
+        header('location: login.php');
+      }
   }
 }
 ?>
