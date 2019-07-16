@@ -5,8 +5,6 @@
 ?>
 <?php
 if(isset($_POST["registerbtn"])){
-    die($password_hash);
-
     $username = $_POST['username'];
     $email = $_POST['email'];
     $roles_id = $_POST['roles_id'];
@@ -33,7 +31,7 @@ if(isset($_POST["registerbtn"])){
 ?>
 <!-- Update Registration --> 
 <?php
-if (isset($_POST['UserUpdate'])) {
+if (isset($_POST['UserUpdate'])){
     $id= $_POST['id'];
     $username =$_POST['username'];
     $email=$_POST['email'];
@@ -77,11 +75,11 @@ if(isset($_POST['addProduct'])){
     $queryRun = mysqli_query($connection, $query);
     if($queryRun)
     {
-        $_SESSION['success'] = "Your Data Is Added!";
+        $_SESSION['message'] = "Your Product Is Added!";
         header("location: products.php");
     }
     else {
-        $_SESSION['status'] = "Your Data Is Not Added!";
+        $_SESSION['status'] = "Your Product Is Not Added!";
         header("location: products.php");
     }
 }
@@ -94,11 +92,7 @@ if (isset($_GET['delete'])) {
     $query = "DELETE FROM products WHERE id=$id";
     $queryRun = mysqli_query($connection, $query);
     if($queryRun){
-        $_SESSION['success'] = "Your Product Is Deleted!";
-        header("location: products.php");
-    }
-    else{
-        $_SESSION['status'] = "Your Product Is Not Deleted!";
+        $_SESSION['message'] = "Your Product Is Deleted!";
         header("location: products.php");
     }
 }
@@ -125,7 +119,6 @@ if (isset($_POST['ProductUpdate'])) {
 <!--Login-->
 
 <?php 
-
 
 if(isset($_POST['loginButton'])){
   $username = $_POST['username'];

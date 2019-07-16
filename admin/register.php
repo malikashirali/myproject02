@@ -52,9 +52,9 @@ include('../includes/db.php');
   </div>
   <div class="card-body">
     <?php 
-    if(isset($_SESSION['success']) && $_SESSION['success'] !='') {
-        echo '<h5 class="alert alert-primary">' .$_SESSION['success'].'</h5>';
-        unset($_SESSION['success']);
+    if(isset($_SESSION['message']) && $_SESSION['message'] !='') {
+        echo '<h5 class="alert alert-primary">' .$_SESSION['message'].'</h5>';
+        unset($_SESSION['message']);
     }
     if(isset($_SESSION['status']) && $_SESSION['status'] !='') {
       echo '<h5 class=""alert alert-danger"">' .$_SESSION['status'].' </h5>';
@@ -79,20 +79,20 @@ include('../includes/db.php');
     if(mysqli_num_rows($queryRun) > 0){
         while($row= mysqli_fetch_assoc($queryRun))
         {
-          ?>
-        <tr>
-        <td><?php echo $row['username']?></td>
-        <td><?php echo $row['email']?></td>
-        <form action="code.php" method="GET">
-        <td>
-        <?php if( $row['roles_id'] != 1){ ?>
-        <a href="code.php?user_delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
-        &nbsp;
-        <a href="registerEdit.php?edit=<?php echo $row['id'];?>" class="btn btn-success">Update</a>
-        <?php } 
-        ?>
-        </form>
-        </tr>  
+    ?>
+    <tr>
+    <td><?php echo $row['username']?></td>
+    <td><?php echo $row['email']?></td>
+    <form action="code.php" method="GET">
+    <td>
+    <?php if( $row['roles_id'] != 1){ ?>
+    <a href="code.php?user_delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
+    &nbsp;
+    <a href="registerEdit.php?edit=<?php echo $row['id'];?>" class="btn btn-success">Update</a>
+    <?php } 
+    ?>
+    </form>
+    </tr>  
     <?php
         }
     }

@@ -1,6 +1,6 @@
 <?php
-    include('includes/navbar.php'); 
     include('includes/header.php'); 
+    include('includes/navbar.php'); 
     include('../includes/db.php'); 
 ?>
 <div class="container-fluid">
