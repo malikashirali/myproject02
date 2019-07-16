@@ -14,7 +14,7 @@
       unset($_SESSION['status']);
   }?>
 
-<div class="jumbotron jumbotronHeader text-center" style="background: url('imgs/header.jpg')center center/ cover no-repeat;">
+<div class="jumbotron jumbotronHeader text-center" style="background: url('../imgs/header.jpg')center center/ cover no-repeat;">
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4" style="color: white;"> 
@@ -91,14 +91,8 @@ $result=mysqli_query($connection,$sql);
 if ($result->num_rows > 0) {
 
     while($row = $result->fetch_assoc()) {
-      echo '<div class="col-sm-4">
-      <img src="'.$row['image'].'" alt="">
-      </a>
-      <h1>
-          '.$row['name'].'
-      </h1>
-      <span>$'.$row['price'].'</span>
-      </div>';
+      echo '<div class="col-sm-4"> <img src="/project/'.$row['image'].'" alt=""></a><h1>'.$row['name'].'</h1>
+      <span>$'.$row['price'].'</span></div>';
   }
 }
 ?>
@@ -134,7 +128,7 @@ if ($result->num_rows > 0) {
     $result=mysqli_query($connection,$sql);
     if ($result->num_rows > 0) {
         while($row = $result -> fetch_assoc()) {
-            echo '<img src="'.$row['image'].'">';
+            echo '<img src="/project/'.$row['image'].'">';
         }
     } 
     ?>
@@ -160,17 +154,17 @@ if ($result->num_rows > 0) {
   </div>
   <div class="row text-center">
     <div class="col-sm-4">
-      <img src="imgs/person_4.jpg" class="rounded-circle mb-4"style="width: 120px" alt="person4">
+      <img src="../imgs/person_4.jpg" class="rounded-circle mb-4"style="width: 120px" alt="person4">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, voluptate?</p>
       <blockquote>-Lucas Gallone</blockquote>
     </div>
     <div class="col-sm-4">
-        <img src="imgs/person_5.jpg" class="rounded-circle mb-4"style="width: 120px" alt="person5">
+        <img src="../imgs/person_5.jpg" class="rounded-circle mb-4"style="width: 120px" alt="person5">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, voluptate?</p>
         <blockquote>-Andrew Neel</blockquote>
       </div>
       <div class="col-sm-4">
-          <img src="imgs/person_3.jpg" class="rounded-circle mb-4"style="width: 120px" alt="person3">
+          <img src="../imgs/person_3.jpg" class="rounded-circle mb-4"style="width: 120px" alt="person3">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, voluptate?</p>
           <blockquote>-Kelly Holmes</blockquote>
         </div>
@@ -181,7 +175,7 @@ if ($result->num_rows > 0) {
     <div class="row">
       <div class="col-sm-6 mb-4">
         <div class="card">
-          <img class="card-img-top" src="imgs/bg_1.jpg" alt="Card image">
+          <img class="card-img-top" src="../imgs/bg_1.jpg" alt="Card image">
           <div class="card-img-overlay">
         <h4 class="card-title">PHARMA PRODUCTS</h4>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quasi!</p>
@@ -190,7 +184,7 @@ if ($result->num_rows > 0) {
   </div>
      <div class="col-sm-6 mb-4">
       <div class="card">
-        <img class="card-img-top " src="imgs/bg_2.jpg" alt="Card image">
+        <img class="card-img-top " src="../imgs/bg_2.jpg" alt="Card image">
            <div class="card-img-overlay">
             <h4 class="card-title">RATED BY EXPERTS</h4>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, velit.

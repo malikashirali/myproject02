@@ -42,21 +42,21 @@
         echo 
         '<div class="row">
         <div class="col-sm-4">
-          <a href="productdetailpage.php"><img src="'.$row['image'].'" alt=""></a>
+          <a href="productdetailpage.php"><img src="/project/'.$row['image'].'" alt=""></a>
             <h1>
             '.$row['name'].'
             </h1>
             <span> '.$row['price'].'</span>
         </div>
         <div class="col-sm-4">
-            <img src="'.$row['image'].'" alt="">
+            <img src="/project/'.$row['image'].'" alt="">
                 <h1>
                 '.$row['name'].'
                 </h1>
                 <span>$'.$row['price'].'</span>
             </div>
            <div class="col-sm-4">
-                    <img src="'.$row['image'].'" alt="">
+                    <img src="/project/'.$row['image'].'" alt="">
                     <h1>
                     '.$row['name'].'
                     </h1>

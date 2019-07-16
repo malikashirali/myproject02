@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("includes/db.php");
+include("../includes/db.php");
 if(isset($_POST['login'])){
   $email = $_POST['email'];
   $password = $_POST['password'];

@@ -89,10 +89,10 @@
 }
 
 .aboutUs  {
-    background: url("imgs/header.jpg")
-    center center/ cover no-repeat;
+    background: url('../imgs/header.jpg')center center/ cover no-repeat;  
     height: 100%;
     color: #fff;
+    
 
 }
 .aboutUs h1{
