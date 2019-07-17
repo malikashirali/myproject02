@@ -13,23 +13,27 @@
       unset($_SESSION['status']);
   }?>
 
-<form action="../includes/function.php" method="POST">
+<form id="register_form" action="../includes/function.php" method="POST">
     <input type="hidden" name="roles_id" value='2' class="form-control" >
     <div class="form-group">
         <label> Username </label>
-        <input type="text" name="username" class="form-control" placeholder="Enter Username" required>
+        <input type="text" name="username" id="register_username" class="form-control" placeholder="Enter Username" required>
+        <span class="text-danger" id="error_register_username"></span>
     </div>
     <div class="form-group">
         <label>Email</label>
-        <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+        <input type="email" name="email" id="register_email" class="form-control" placeholder="Enter Email" required>
+        <span class="text-danger" id="error_register_email"></span>
     </div>
     <div class="form-group">
         <label>Password</label>
-        <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+        <input type="password" name="password" id="register_password" class="form-control" placeholder="Enter Password" required>
+        <span class="text-danger" id="error_register_password"></span>
     </div>
     <div class="form-group">
         <label>Confirm Password</label>
-        <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
+        <input type="password" name="confirmpassword"  id="register_confirmpassword" class="form-control" placeholder="Confirm Password" required>
+        <span class="text-danger" id="error_register_confirmpassword"></span>
     </div>
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
     <button type="submit" name="registerButton" class="btn btn-primary">Save</button>
