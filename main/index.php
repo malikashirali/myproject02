@@ -13,7 +13,7 @@
       unset($_SESSION['status']);
   }?>
 
-<div class="jumbotron jumbotronHeader text-center" style="background: url('../imgs/header.jpg')center center/ cover no-repeat;">
+<div class="jumbotron jumbotronHeader text-center">
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4" style="color: white;"> 

@@ -31,8 +31,7 @@
    
 }
 .jumbotronHeader {
-    /*background: url("../imgs/header.jpg")*/
-    /*center center/ cover no-repeat;*/
+    background: url('../imgs/header.jpg')center center/ cover no-repeat !important;
     
 }
 

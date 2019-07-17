@@ -1,6 +1,7 @@
 <?php   
     include("../includes/header.php");
     include("../includes/db.php"); 
+    
 ?>
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -19,8 +20,9 @@
 <?php      
     echo $_SESSION['message'];
     unset($_SESSION['message']);
-    echo '</div>';     
+    echo '</div>';  
     }
+
 ?> 
 
 <form action="../includes/function.php" method="POST">
@@ -29,27 +31,76 @@
         <label for="firstname">First Name</label> 
         <span class="text-danger">*</span>
         <input type="text" class="form-control is-required" id="firstname" name="firstname">
+        <span class="text-danger">
+        <?php
+         if(isset($_SESSION['firstnameErr'])){
+              echo $_SESSION['firstnameErr'];
+              unset($_SESSION['firstnameErr']);
+         }
+         ?>
+         </span>
         </div>
         <div class="form-group col-md-6">
         <label for="lastname">Last Name</label>
         <span class="text-danger">*</span>
         <input type="text" class="form-control" id="lastname" name="lastname">
+        <span class="text-danger">
+        <?php
+         if(isset($_SESSION['lastnameErr'])){
+              echo $_SESSION['lastnameErr'];
+              unset($_SESSION['lastnameErr']);
+         }
+         ?>
+         </span>
         </div>
     </div>
     <div class="form-group">
         <label for="email">Email</label>
         <span class="text-danger">*</span>
         <input type="email" class="form-control" id="email" name="email">
+        <span class="text-danger">
+        <?php
+         if(isset($_SESSION['emailErr'])){
+              echo $_SESSION['emailErr'];
+              unset($_SESSION['emailErr']);
+         }
+         ?>
+         </span>
     </div>
     <div class="form-group">
         <label for="subject">Subject</label>
         <input type="text" class="form-control" id="subject" name="subject">
+        <span class="text-danger">
+        <?php
+         if(isset($_SESSION['subjectErr'])){
+              echo $_SESSION['subjectErr'];
+              unset($_SESSION['subjectErr']);
+         }
+         ?>
+         </span>
     </div>
     <div class="form-group">
-            <label for="message">Message</label>
-            <textarea type="text" class="form-control" id="message" name="message" rows="10"></textarea>
-            </div>
-    <div> <input type="submit" name="contactSubmit" class="btn btn-outline w-100" value="SEND MESSAGE"></div>
+        <label for="message">Message</label>
+        <textarea type="text" class="form-control" id="message" name="message" rows="10"></textarea>
+        <span class="text-danger">
+        <?php
+        if(isset($_SESSION['messageErr'])){
+            echo $_SESSION['messageErr'];
+            unset($_SESSION['messageErr']);
+        }
+        ?>
+        </span>
+        </div>
+    <div> 
+    <?php
+    if(!(isset($_SESSION['current_username']))) {
+        header('location: index.php');
+    ?>
+    <input type="submit" name="contactSubmit" class="btn btn-outline w-100" value="SEND MESSAGE">
+    <?php
+    } 
+    ?>
+</div>
 </form>
 </div>
 <!--Offices Section -->
