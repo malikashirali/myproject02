@@ -89,13 +89,13 @@
          <div class="col-sm-6 mb-5 mt-5 pl-5 pr-5">
           <div class="card">
             <img class="card-img-top " src="../imgs/bg_2.jpg" alt="Card image" style="min-height: 300px;">
-               <div class="card-img-overlay">
-                <h4 class="card-title">RATED BY EXPERTS</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, velit.
-                </p>
-              </div>
-          </div>
+            <div class="card-img-overlay">
+              <h4 class="card-title">RATED BY EXPERTS</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, velit.
+              </p>
+            </div>
         </div>
       </div>
-      </div>
+    </div>
+  </div>
 <?php include("../includes/footer.php");?>

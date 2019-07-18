@@ -83,7 +83,7 @@ $row=mysqli_fetch_array($result);
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 <?php
         include("../includes/footer.php");

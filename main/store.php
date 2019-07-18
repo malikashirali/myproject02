@@ -76,13 +76,13 @@ $connection->close();
 <div class="row mt-5">
     <div class="col-md-12 text-center">
         <ul class="pagination">
-            <li class="page-item"><a href="" class="page-link"> < </a></li>
-            <li class="page-item"><a href="" class="page-link"> 1 </a></li>
-            <li class="page-item"><a href="" class="page-link"> 2 </a></li>
-            <li class="page-item"><a href="" class="page-link"> 3 </a></li>
-            <li class="page-item"><a href="" class="page-link"> 4 </a></li>
-            <li class="page-item"><a href="" class="page-link"> 5 </a></li>
-            <li class="page-item"><a href="" class="page-link"> > </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> < </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> 1 </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> 2 </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> 3 </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> 4 </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> 5 </a></li>
+            <li class="page-item"><a href="store.php" class="page-link"> > </a></li>
         </ul>
     </div>
 </div>
@@ -110,5 +110,5 @@ $connection->close();
       </div>
     </div>
   </div>
-  </div>
+</div>
 <?php include("../includes/footer.php"); ?>

@@ -107,9 +107,9 @@ $(function(){
         } else{
             return false;
         }
-    })
-});
+    });
 
+});
 
 /* Registartion Form */
 $(function(){
@@ -137,14 +137,15 @@ $(function(){
     });
 
     function check_username(){
-        var username_length = $("#register_username").val().length;
-        if(username_length < 5 || username_length > 20){
-            $("#error_register_username").html("Should be between 5-20 characters");
-            $("#error_register_username").show();
-            error_firstname = true;
+        var pattern = /^[a-zA-Z]*$/;
+        var username = $("#register_username").val();
+        if (pattern.test(username) && username !== '') {
+            $("#error_register_username").hide();
         }
         else {
-            $("#error_contact_firstname").hide();
+            $("#error_register_username").html("Only letters are allowed");
+            $("#error_register_username").show();
+            error_firstname = true;
         }
 
         }
@@ -153,6 +154,7 @@ $(function(){
         var email = $("#register_email").val();
         if(pattern.test(email) && email !== ''){
             $("#error_register_email").hide();
+            
         }
         else {
             $("#error_register_email").html("Invalid Email");
@@ -161,6 +163,7 @@ $(function(){
         }
 
         }
+        
         function check_password() {
             var password_length = $("#register_password").val().length;
             if (password_length < 8) {
@@ -168,13 +171,13 @@ $(function(){
                $("#error_register_password").show();
                error_password = true;
             } else {
-               $("#password_error_message").hide();
+               $("#error_register_password").hide();
             }
          }
 
          function check_confirmpassword() {
-            var password = $("#register_confirmpassword").val();
-            var confirmpassword = $("#error_register_confirmpassword").val();
+            var password = $("#register_password").val();
+            var confirmpassword = $("#register_confirmpassword").val();
             if (password !== confirmpassword) {
                $("#error_register_confirmpassword").html("Passwords Did not Matched");
                $("#error_register_confirmpassword").show();
